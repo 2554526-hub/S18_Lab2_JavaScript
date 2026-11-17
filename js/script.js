@@ -27,7 +27,7 @@ function exemple1()
 	// Modifier le code pour appliquer le changement pour toutes les cartes
 	// Il faut utiliser une boucle avec un index 
 	for(let i = 0; i < lesCartes.length; i++){
-		lesCartes[0].className = "coeur13";
+		lesCartes[i].className = "coeur13";
 	}
 }
 
@@ -38,8 +38,8 @@ function exemple2()
 	
 	let lesCartes = document.getElementsByTagName("li");
 
-	for(let i = 0; i < lesCartes.length; i++){
-		
+	for(let i = 0; i < lesCartes.length  ; i++){
+		lesCartes[i].className = "pique" + (i + 1);
 	}
 }
 
@@ -47,6 +47,11 @@ function exemple2()
 function exemple3()
 {	
 	retirerLesClasses();
+	let lesCartes = document.getElementsByTagName("li");
+
+	for(let i = 13; i < lesCartes.length  ; i--){
+		lesCartes[i].className = "coeur" + (i + 1) ;
+	}
 }
 
 //=================================================================
